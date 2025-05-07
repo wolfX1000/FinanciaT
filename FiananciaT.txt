@@ -1,0 +1,300 @@
+<!DOCTYPE16 html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINANCIA-T | Asesoría Financiera Profesional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f9ff;
+      color: #0e3c6e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #0e3c6e;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header h1 { font-size: 2rem; }
+    .search-bar input {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .search-bar button {
+      padding: 8px 15px;
+      background-color: #1b5ca3;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    .search-bar button:hover { background-color: #008080; }
+    .main-container { display: flex; flex: 1; }
+    .sidebar {
+      width: 18%;
+      background-color: #e6f0fa;
+      padding: 20px;
+      text-align: center;
+    }
+    .logo img { width: 100px; margin-bottom: 15px; }
+    .social_links a {
+      display: block;
+      margin: 10px 0;
+      color: #0e3c6e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .social_links a:hover { color: #008080; }
+    .main {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      gap: 40px;
+    }
+    .content { flex: 2; }
+    .content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .tabs {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .tab {
+      padding: 15px;
+      background: #1b5ca3;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 1.1rem;
+    }
+    .tab:hover { background-color: #008080; }
+    .tab.active { background-color: #004080; }
+    footer {
+      background-color: #0e3c6e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+    footer a:hover { color: lightgray; }
+    .cta-button {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #008080;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .cta-button:hover { background-color: #005f5f; }
+    .service-button {
+      background: #1b5ca3;
+      color: white;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .service-button:hover { background-color: #008080; }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+    .modal button {
+      background-color: #008080;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .modal button:hover { background-color: #005f5f; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FINANCIA-T</h1>
+    <div class="search-bar">
+      <input id="busqueda" type="text" placeholder="Buscar asesorías, tips...">
+      <button onclick="buscar()">Buscar</button>
+    </div>
+  </header>
+  <div class="main-container">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="empresa.jpg" alt="Logo Financia-T">
+      </div>
+      <div class="social_links">
+        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+      </div>
+    </aside>
+    <main class="main">
+      <section class="content" id="contenido">
+        <h2>Transforma tu futuro financiero</h2>
+        <p>En <strong>Financia-T</strong> te ayudamos a tomar las mejores decisiones con asesoramiento personalizado.</p>
+        <a href="#" class="cta-button" onclick="mostrar('servicios')">Contratar Asesoría</a>
+        <img src="https://drive.google.com/file/d/14-gKULViPTkurUAhVjtYPelhE_M5EBjD/view" alt="Asesoría financiera profesional">
+      </section>
+      <nav class="tabs">
+        <div class="tab" onclick="mostrar('inicio')">Inicio</div>
+        <div class="tab" onclick="mostrar('servicios')">Servicios</div>
+        <div class="tab" onclick="mostrar('conocenos')">Conócenos</div>
+        <div class="tab" onclick="mostrar('comentarios')">Comentarios</div>
+        <div class="tab" onclick="mostrar('contacto')">Contacto</div>
+      </nav>
+    </main>
+  </div>
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <h3>Formulario de Pago</h3>
+      <p>Ingresa los detalles de pago a continuación:</p>
+      <label for="paymentAmount">Monto:</label>
+      <input type="text" id="paymentAmount" placeholder="Monto en $">
+      <button onclick="procesarPago()">Realizar Pago</button>
+      <button onclick="cerrarModal()">Cancelar</button>
+    </div>
+  </div>
+  <footer>
+    <p>
+      <a href="#">Política de privacidad</a> |
+      <a href="#">Términos y condiciones</a> |
+      <a href="#">Aviso legal</a>
+    </p>
+  </footer>
+  <script>
+    let historial = ['inicio'];
+    function buscar() {
+      const query = document.getElementById('busqueda').value.toLowerCase();
+      const secciones = ['inicio', 'servicios', 'conocenos', 'comentarios', 'contacto'];
+      if (secciones.includes(query)) {
+        mostrar(query);
+      } else {
+        window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+      }
+    }
+    function mostrar(seccion) {
+      const contenido = document.getElementById('contenido');
+      let html = '';
+      const backButton = '<button onclick="regresar()">Regresar</button>';
+      switch (seccion) {
+        case 'inicio':
+          html = `<h2>Transforma tu futuro financiero</h2>
+            <p>En <strong>Financia-T</strong> te ayudamos a tomar las mejores decisiones con asesoramiento personalizado.</p>
+            <a href="C:\Users\Ragnar\Downloads\F\Color.jpg" class="cta-button" onclick="mostrar('servicios')">Contratar Asesoría</a>
+            <img src="asesoria-financiera.jpg" alt="Asesoría financiera profesional">`;
+          break;
+        case 'servicios':
+          html = `<h2>Nuestros Servicios</h2>
+            <p>Ofrecemos asesoría en finanzas personales, inversiones, ahorro, créditos y más.</p>
+            <div class="service-button" onclick="mostrarServicio('servicio1')">Servicio 1</div>
+            <div class="service-button" onclick="mostrarServicio('servicio2')">Servicio 2</div>
+            <div class="service-button" onclick="mostrarServicio('servicio3')">Servicio 3</div>
+            <div class="service-button" onclick="mostrarServicio('servicio4')">Servicio 4</div>
+            <div class="service-button" onclick="mostrarServicio('servicio5')">Servicio 5</div>
+            <div class="service-button" onclick="mostrarServicio('servicio6')">Servicio 6</div>`;
+          break;
+        case 'conocenos':
+          html = `<h2>¿Quiénes somos?</h2><p>Financia-T está formado por expertos en economía y finanzas con más de 10 años de experiencia.</p><img src="equipo.jpg" alt="Equipo de trabajo">`;
+          break;
+        case 'comentarios':
+          html = `<h2>Lo que dicen nuestros clientes</h2><p>"Gracias a Financia-T ahora tengo control total sobre mis finanzas."</p><img src="clientes.jpg" alt="Clientes satisfechos">`;
+          break;
+        case 'contacto':
+          html = `<h2>Contáctanos</h2><p>Escríbenos a contacto@financia-t.com o llámanos al 555-123-4567.</p><img src="contacto.jpg" alt="Contacto">`;
+          break;
+        default:
+          html = `<h2>Bienvenido a Financia-T</h2><p>Selecciona una sección del menú.</p>`;
+      }
+      contenido.innerHTML = backButton + html;
+      historial.push(seccion);
+    }
+    function regresar() {
+      historial.pop();
+      mostrar(historial[historial.length - 1]);
+    }
+    function mostrarServicio(servicio) {
+      let descripcion = '';
+      const backButton = '<button onclick="regresar()">Regresar</button>';
+      switch (servicio) {
+        case 'servicio1':
+          descripcion = `<h3>Asesoría en Finanzas Personales</h3><p>Te ayudamos a gestionar tus finanzas personales, presupuesto y ahorros.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          break;
+        case 'servicio2':
+          descripcion = `<h3>Inversiones Inteligentes</h3><p>Te asesoramos en cómo realizar inversiones seguras y rentables.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          break;
+        case 'servicio3':
+          descripcion = `<h3>Créditos y Préstamos</h3><p>Te ayudamos a elegir el mejor crédito o préstamo según tu situación financiera.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          break;
+        case 'servicio4':
+          descripcion = `<h3>Planificación para el Retiro</h3><p>Te guiamos para que construyas un futuro tranquilo mediante estrategias de ahorro a largo plazo.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          break;
+        case 'servicio5':
+          descripcion = `<h3>Educación Financiera Personalizada</h3><p>Aprende desde lo básico hasta estrategias avanzadas para tomar mejores decisiones económicas.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          break;
+        case 'servicio6':
+          descripcion = `<h3>Gestión de Deudas</h3><p>Te ayudamos a organizar y reducir tus deudas con planes personalizados y efectivos.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          break;
+        default:
+          descripcion = `<p>Servicio no disponible.</p>`;
+      }
+      document.getElementById('contenido').innerHTML = backButton + descripcion;
+    }
+    function abrirModal() {
+      document.getElementById('paymentModal').style.display = 'block';
+    }
+    function cerrarModal() {
+      document.getElementById('paymentModal').style.display = 'none';
+    }
+    function procesarPago() {
+      const monto = document.getElementById('paymentAmount').value;
+      alert(`Pago procesado por $${monto}`);
+      cerrarModal();
+    }
+  </script>
+</body>
+</html>
+
