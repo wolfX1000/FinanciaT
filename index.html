@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FINANCIA-T | Asesoría Financiera Profesional</title>
+  <title>FINANCIA-T | AsesorÃ­a Financiera Profesional</title>
   <link rel="stylesheet" href="file:///C:/Users/Ragnar/Downloads/F/1.jpg">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -166,14 +166,14 @@
   <header>
     <h1>FINANCIA-T</h1>
     <div class="search-bar">
-      <input id="busqueda" type="text" placeholder="Buscar asesorías, tips...">
+      <input id="busqueda" type="text" placeholder="Buscar asesorÃ­as, tips...">
       <button onclick="buscar()">Buscar</button>
     </div>
   </header>
 
   <!-- Banner motivacional -->
   <div class="motivational-banner">
-    Tu esfuerzo de hoy es la tranquilidad del mañana, asegura tu bienestar
+    Tu esfuerzo de hoy es la tranquilidad del maÃ±ana, asegura tu bienestar
   </div>
 
   <div class="main-container">
@@ -192,13 +192,13 @@
       <section class="content" id="contenido">
         <h2>Transforma tu futuro financiero</h2>
         <p>En <strong>Financia-T</strong> te ayudamos a tomar las mejores decisiones con asesoramiento personalizado.</p>
-        <a href="#" class="cta-button" onclick="mostrar('servicios')">Contratar Asesoría</a>
+        <a href="#" class="cta-button" onclick="mostrar('servicios')">Contratar AsesorÃ­a</a>
         <img src="file:///C:/Users/Ragnar/Downloads/F/22.png">
       </section>
       <nav class="tabs">
         <div class="tab" onclick="mostrar('inicio')">Inicio</div>
         <div class="tab" onclick="mostrar('servicios')">Servicios</div>
-        <div class="tab" onclick="mostrar('conocenos')">Conócenos</div>
+        <div class="tab" onclick="mostrar('conocenos')">ConÃ³cenos</div>
         <div class="tab" onclick="mostrar('comentarios')">Comentarios</div>
         <div class="tab" onclick="mostrar('contacto')">Contacto</div>
       </nav>
@@ -208,7 +208,7 @@
   <div id="paymentModal" class="modal">
     <div class="modal-content">
       <h3>Formulario de Pago</h3>
-      <p>Ingresa los detalles de pago a continuación:</p>
+      <p>Ingresa los detalles de pago a continuaciÃ³n:</p>
       <label for="paymentAmount">Monto:</label>
       <input type="text" id="paymentAmount" placeholder="Monto en $">
       <button onclick="procesarPago()">Realizar Pago</button>
@@ -218,8 +218,8 @@
 
   <footer>
     <p>
-      <a href="#">Política de privacidad</a> |
-      <a href="#">Términos y condiciones</a> |
+      <a href="#">PolÃ­tica de privacidad</a> |
+      <a href="#">TÃ©rminos y condiciones</a> |
       <a href="#">Aviso legal</a>
     </p>
   </footer>
@@ -243,12 +243,12 @@
         case 'inicio':
           html = `<h2>Transforma tu futuro financiero</h2>
             <p>En <strong>Financia-T</strong> te ayudamos a tomar las mejores decisiones con asesoramiento personalizado.</p>
-            <a href="file:///C:/Users/Ragnar/Downloads/F/1.jpg" class="cta-button" onclick="mostrar('servicios')">Contratar Asesoría</a>
+            <a href="file:///C:/Users/Ragnar/Downloads/F/1.jpg" class="cta-button" onclick="mostrar('servicios')">Contratar AsesorÃ­a</a>
             <img src="file:///C:/Users/Ragnar/Downloads/F/Screenshot_221.png">`;
           break;
         case 'servicios':
           html = `<h2>Nuestros Servicios</h2>
-            <p>Ofrecemos asesoría en finanzas personales, inversiones, ahorro, créditos y más.</p>
+            <p>Ofrecemos asesorÃ­a en finanzas personales, inversiones, ahorro, crÃ©ditos y mÃ¡s.</p>
             <div class="service-button" onclick="mostrarServicio('servicio1')">Servicio 1</div>
             <div class="service-button" onclick="mostrarServicio('servicio2')">Servicio 2</div>
             <div class="service-button" onclick="mostrarServicio('servicio3')">Servicio 3</div>
@@ -257,16 +257,16 @@
             <div class="service-button" onclick="mostrarServicio('servicio6')">Servicio 6</div>`;
           break;
         case 'conocenos':
-          html = `<h2>¿Quiénes somos?</h2><p>Financia-T está formado por expertos en economía y finanzas con más de 10 años de experiencia.</p><img src="file:///C:/Users/Ragnar/Downloads/F/clientes.jpg" alt="Equipo de trabajo">`;
+          html = `<h2>Â¿QuiÃ©nes somos?</h2><p>Financia-T estÃ¡ formado por expertos en economÃ­a y finanzas con mÃ¡s de 10 aÃ±os de experiencia.</p><img src="file:///C:/Users/Ragnar/Downloads/F/clientes.jpg" alt="Equipo de trabajo">`;
           break;
         case 'comentarios':
           html = `<h2>Lo que dicen nuestros clientes</h2><p>"Gracias a Financia-T ahora tengo control total sobre mis finanzas."</p><img src="file:///C:/Users/Ragnar/Downloads/F/Screenshot_221.png" alt="Clientes satisfechos">`;
           break;
         case 'contacto':
-          html = `<h2>Contáctanos</h2><p>Escríbenos a contacto@financia-t.com o llámanos al 555-123-4567.</p><img src="file:///C:/Users/Ragnar/Downloads/F/44.png" alt="Contacto">`;
+          html = `<h2>ContÃ¡ctanos</h2><p>EscrÃ­benos a contacto@financia-t.com o llÃ¡manos al 555-123-4567.</p><img src="file:///C:/Users/Ragnar/Downloads/F/44.png" alt="Contacto">`;
           break;
         default:
-          html = `<h2>Bienvenido a Financia-T</h2><p>Selecciona una sección del menú.</p>`;
+          html = `<h2>Bienvenido a Financia-T</h2><p>Selecciona una secciÃ³n del menÃº.</p>`;
       }
       contenido.innerHTML = backButton + html;
       historial.push(seccion);
@@ -280,22 +280,22 @@
       const backButton = '<button onclick="regresar()">Regresar</button>';
       switch (servicio) {
         case 'servicio1':
-          descripcion = `<h3>Asesoría en Finanzas Personales</h3><p>Te ayudamos a gestionar tus finanzas personales, presupuesto y ahorros.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          descripcion = `<h3>AsesorÃ­a en Finanzas Personales</h3><p>Te ayudamos a gestionar tus finanzas personales, presupuesto y ahorros.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
           break;
         case 'servicio2':
-          descripcion = `<h3>Inversiones Inteligentes</h3><p>Te asesoramos en cómo realizar inversiones seguras y rentables.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          descripcion = `<h3>Inversiones Inteligentes</h3><p>Te asesoramos en cÃ³mo realizar inversiones seguras y rentables.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
           break;
         case 'servicio3':
-          descripcion = `<h3>Créditos y Préstamos</h3><p>Te ayudamos a elegir el mejor crédito o préstamo según tu situación financiera.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          descripcion = `<h3>CrÃ©ditos y PrÃ©stamos</h3><p>Te ayudamos a elegir el mejor crÃ©dito o prÃ©stamo segÃºn tu situaciÃ³n financiera.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
           break;
         case 'servicio4':
-          descripcion = `<h3>Planificación para el Retiro</h3><p>Te guiamos para que construyas un futuro tranquilo mediante estrategias de ahorro a largo plazo.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          descripcion = `<h3>PlanificaciÃ³n para el Retiro</h3><p>Te guiamos para que construyas un futuro tranquilo mediante estrategias de ahorro a largo plazo.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
           break;
         case 'servicio5':
-          descripcion = `<h3>Educación Financiera Personalizada</h3><p>Aprende desde lo básico hasta estrategias avanzadas para tomar mejores decisiones económicas.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          descripcion = `<h3>EducaciÃ³n Financiera Personalizada</h3><p>Aprende desde lo bÃ¡sico hasta estrategias avanzadas para tomar mejores decisiones econÃ³micas.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
           break;
         case 'servicio6':
-          descripcion = `<h3>Gestión de Deudas</h3><p>Te ayudamos a organizar y reducir tus deudas con planes personalizados y efectivos.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
+          descripcion = `<h3>GestiÃ³n de Deudas</h3><p>Te ayudamos a organizar y reducir tus deudas con planes personalizados y efectivos.</p><button class="cta-button" onclick="abrirModal()">Contratar Servicio</button>`;
           break;
         default:
           descripcion = `<p>Servicio no disponible.</p>`;
