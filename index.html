@@ -207,12 +207,13 @@
         <img src="assets/images/asesoria.jpg" alt="asesoria">
       </section>
       <nav class="tabs">
-        <div class="tab" onclick="mostrar('inicio')">Inicio</div>
-        <div class="tab" onclick="mostrar('servicios')">Servicios</div>
-        <div class="tab" onclick="mostrar('conocenos')">Conócenos</div>
-        <div class="tab" onclick="mostrar('comentarios')">Comentarios</div>
-        <div class="tab" onclick="mostrar('contacto')">Contacto</div>
+        <div class="tab" onclick="gtag('event', 'menu_click', {'menu_name': 'Inicio'}); mostrar('inicio')">Inicio</div>
+        <div class="tab" onclick="gtag('event', 'menu_click', {'menu_name': 'Servicios'}); mostrar('servicios')">Servicios</div>
+        <div class="tab" onclick="gtag('event', 'menu_click', {'menu_name': 'Conocenos'}); mostrar('conocenos')">Conócenos</div>
+        <div class="tab" onclick="gtag('event', 'menu_click', {'menu_name': 'Comentarios'}); mostrar('comentarios')">Comentarios</div>
+        <div class="tab" onclick="gtag('event', 'menu_click', {'menu_name': 'Contacto'}); mostrar('contacto')">Contacto</div>
       </nav>
+
     </main>
   </div>
 
